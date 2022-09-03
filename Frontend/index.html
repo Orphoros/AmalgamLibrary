@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Amalgam Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <script defer src="js/init.js"></script>
+    <script defer src="js/indexButtonEvents.js"></script>
+    <script defer src="js/loadCatalog.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <section id="global-header-title">
+            <img id="logo" src="src/Orphoros.png" alt="Orphoros logo">
+            <h1>Orphoros – Amalgam Library</h1>
+        </section>
+
+        <section id="global-header-subtitle">
+            <p>Repo of books</p>
+            <button class="global-button-navigation" id="index-button-showEditPage">Edit Repo!</button>
+        </section>
+    </header>
+
+    <main>
+        <aside>
+            <h1>Filter books!</h1>
+            <form id="index-form-filter">
+                <label for="index-input-bookTitleSearch">Book title containing:</label><br>
+                <input type="text" id="index-input-bookTitleSearch" maxlength="255" name="title"
+                    placeholder="eg. Computer"><br>
+
+                <label for="index-input-bookYearSearch">Publish year:</label><br>
+                <input type="number" id="index-input-bookYearSearch" name="publishYear" step="1"
+                    placeholder="eg. 2020"><br>
+
+                Readable by kids: <br>
+
+                <input type="radio" id="index-input-bookKidsSearch-null" name="forKids" value="null" checked>
+                <label for="index-input-bookKidsSearch-null">Does not matter</label><br>
+
+                <input type="radio" id="index-input-bookKidsSearch-yes" name="forKids" value="true">
+                <label for="index-input-bookKidsSearch-yes">Yes</label><br>
+
+                <input type="radio" id="index-input-bookKidsSearch-no" name="forKids" value="false">
+                <label for="index-input-bookKidsSearch-no">No</label><br>
+
+                <br>
+                <input type="submit" value="Filter">
+            </form>
+        </aside>
+
+        <section id="index-section-catalog">
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © <time id="global-footer-copyrightYear" dateTime="">@CURRENT-YEAR</time>, Orphoros. All rights
+            reserved.</p>
+    </footer>
+</body>
+
+</html>

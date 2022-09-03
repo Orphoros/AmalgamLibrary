@@ -1,0 +1,357 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #262334;
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100%;
+}
+
+main {
+    padding-top: 6.25em;
+    padding-bottom: 3.125em;
+}
+
+aside {
+    background-color: #291f37;
+    right: 0; 
+    padding: 0.5rem;
+    height: 100%;
+    width: 15em;
+    position: fixed;
+    border-left: 0.625em solid #171522; 
+    border-bottom: 0.625em solid #171522; 
+}
+
+#index-section-catalog {
+    max-width: calc( 100% - 15em);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+#book-section-details {
+    max-width: calc( 100% - 15em);
+}
+
+#editor-main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: start;
+}
+
+.editor-section {
+    flex: 0 0 auto;
+    margin: 1.5em;
+    padding: 0.625em;
+    background-color: #4f4859;
+    border: 0.3em solid #381344;
+    width: 20em;
+}
+
+.editor-section > h1 {
+    text-align: center;
+}
+
+.editor-section [type=submit] {
+    float: right;
+}
+
+.book {
+    background-color: #4f4859;
+    width: 25em;
+    height: 9.5em;
+    border-radius: 1.5em;
+    border: 0.3em solid #381344; 
+    margin: 1.5em;
+    padding: 0.6em;
+
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+
+    position:relative;
+}
+
+.book:hover {
+    cursor:pointer;
+    border: 0.3em solid #651d80; 
+}
+
+.book > img {
+    width: 6.25em;
+    height: 6.25em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-right: 1.25em;
+    float: left;
+}
+
+.book > h1 {
+    margin: 0;
+}
+
+.book > h3 {
+    font-style: italic;
+    color: #949393;
+    margin: 0;
+    font-size: small;
+}
+
+.book > p {
+    margin-top: 0.625em;
+    margin-bottom: 0;
+}
+
+header {
+    text-align: left;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    height: 6.25em;
+}
+
+header > section > h1 {
+    color: white;
+    font-size: 1.25em;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+header > section > p {
+    color: white;
+    font-size: 1.25em;
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-left: 0.3em;
+    margin-bottom: 0;
+}
+
+.book-publishYear {
+    position:absolute;
+    bottom: 0.3em;
+    right: 0.625em;
+}
+
+.global-button-navigation {
+    float: right;
+    margin-right: 1.25em;
+    margin-top: 0.625em;
+}
+
+.editor-section input[type=text], .editor-section input[type=number] {
+    width: 20em;
+}
+
+.editor-section select {
+    width: 20.6em;
+}
+
+#logo {
+    border-radius: 50%;
+    border: 0.1rem solid white;
+    position: relative;
+    top: 0.625em;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.3em;
+}
+
+#global-header-title {
+    background-color: #22192c;
+    width: 100%;
+    color: white;
+    height: 3.75em;
+}
+
+input {
+    margin-bottom: 0.625em;
+}
+
+#global-header-subtitle {
+    background-color: #171522;
+    width: 100%;
+    color: white;
+    height: 2.5em;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 3.125em;
+    z-index: 98;
+    background-color: #24182a;
+}
+
+footer > p {
+    font-size: 0.7em;
+    color: white;
+    margin-top: 1.5em;
+}
+
+#book-section-details table {
+    border: 0.25em solid #171522;
+    background-color: #555555;
+    width:100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-bottom: 6.25em;
+}
+
+#book-section-details table td, table th {
+    border: 0.125em solid #171522;
+    padding: 0.5em;
+}
+
+#book-section-details table tbody td {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#book-section-details table tr:nth-child(even) {
+    background: #6C6C6C;
+}
+
+#book-section-details table thead {
+    background: #24182a;
+    border-bottom: 0.25em solid #171522;
+}
+
+#book-section-details table thead th {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 0.25em solid #171522;
+}
+
+#book-section-details table thead th:first-child {
+    border-left: none;
+}
+
+#book-section-details table thead th:nth-child(-n+2) {
+    width: 1%;
+    white-space: nowrap;
+}
+
+#bookInfo-title, #bookInfo-isbn, #bookInfo-year, #bookInfo-notes {
+    color: #bc83d1;
+}
+
+#book-section-details > h1, #book-section-details > h2, #book-section-details > p {
+    margin-left: 0.625rem ;
+}
+
+#book-section-details > h2 {
+    margin-top: 4.4em;
+}
+
+@media screen and (max-width: 750px){
+    .book {
+        background-color: #4f4859;
+        width: 100%;
+        height: 9.4em;
+        border: none;
+        padding: 0.625em;
+        border-radius: 0;
+        margin: 0 0 1em;
+
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+    }
+
+    #book-section-details > h2 {
+        margin-top: 2em;
+    }
+
+    #book-section-details table {
+        border: 0.25em solid #171522;
+        background-color: #555555;
+        width:100%;
+        text-align: left;
+        border-collapse: collapse;
+        margin-bottom: 1em;
+    }
+
+    .editor-section {
+        background-color: #4f4859;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        border: none;
+        padding: 0.625em;
+        margin: 0 0 1em;
+
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+    }
+
+    .book:hover{
+        cursor:pointer;
+        border: none;
+        background-color: #61576e;
+    }
+
+    #index-section-catalog, #editor-main {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        align-content: stretch;
+    }
+
+    #book-section-details {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    aside {
+        background-color: #291f37;
+        right: 0; 
+        padding: 0.5rem;
+        width: auto;
+        position:initial;
+        border: none;
+        margin-bottom: 0.625em;
+    }
+
+    footer {
+        margin-top: 6.25em;
+    }
+
+    footer p {
+        margin-bottom: 0;
+    }
+}

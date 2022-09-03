@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"dev.orphoros.demo.amalgamlib"},{"l":"dev.orphoros.demo.amalgamlib.controllers"},{"l":"dev.orphoros.demo.amalgamlib.exceptions"},{"l":"dev.orphoros.demo.amalgamlib.model"},{"l":"dev.orphoros.demo.amalgamlib.repository"},{"l":"dev.orphoros.demo.amalgamlib.services"}]

@@ -1,0 +1,6 @@
+dev.orphoros.demo.amalgamlib
+dev.orphoros.demo.amalgamlib.controllers
+dev.orphoros.demo.amalgamlib.exceptions
+dev.orphoros.demo.amalgamlib.model
+dev.orphoros.demo.amalgamlib.repository
+dev.orphoros.demo.amalgamlib.services

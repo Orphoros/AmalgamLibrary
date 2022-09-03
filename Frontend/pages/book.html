@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Amalgam Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+    <script defer src="../js/init.js"></script>
+    <script defer src="../js/bookButtonEvents.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <section id="global-header-title">
+            <img id="logo" src="../src/Orphoros.png" alt="Orphoros logo">
+            <h1>Orphoros – Amalgam Library</h1>
+        </section>
+
+        <section id="global-header-subtitle">
+            <p>Book Info</p>
+            <button class="global-button-navigation" id="book-button-ShowRepoPage">Go back to Repo!</button>
+        </section>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Add a new review!</h2>
+            <form id="book-form-addReview">
+                <label for="book-input-reviewNickname">Nickname:</label><br>
+                <input type="text" id="book-input-reviewNickname" maxlength="20" name="nickname"
+                    placeholder="Your Nickname" required><br>
+
+                Your rating for the book: <br>
+
+                <input type="radio" id="book-input-reviewStars-5" name="starsGiven" value="5" checked>
+                <label for="book-input-reviewStars-5">5 stars</label><br>
+
+                <input type="radio" id="book-input-reviewStars-4" name="starsGiven" value="4">
+                <label for="book-input-reviewStars-4">4 stars</label><br>
+
+                <input type="radio" id="book-input-reviewStars-3" name="starsGiven" value="3">
+                <label for="book-input-reviewStars-3">3 stars</label><br>
+
+                <input type="radio" id="book-input-reviewStars-2" name="starsGiven" value="2">
+                <label for="book-input-reviewStars-2">2 stars</label><br>
+
+                <input type="radio" id="book-input-reviewStars-1" name="starsGiven" value="1">
+                <label for="book-input-reviewStars-1">1 star</label><br>
+
+                <label for="book-input-reviewComment">Review:</label><br>
+                <input type="text" id="book-input-reviewComment" name="comment" maxlength="255"
+                    placeholder="Enter your review here!" required><br>
+
+                <br>
+                <input type="submit" value="Add your review!">
+            </form>
+        </aside>
+        <section id="book-section-details">
+            <h1>Title: <span id="bookInfo-title">...</span></h1>
+            <p>ISBN: <span id="bookInfo-isbn">...</span></p>
+            <p>Publish year: <span id="bookInfo-year">...</span></p>
+            <p>Notes: <span id="bookInfo-notes">...</span></p>
+
+            <h2>Reviews: </h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nickname</th>
+                        <th>Stars given</th>
+                        <th>Comment</th>
+                    </tr>
+                </thead>
+                <tbody id="book-table-reviews">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © <time id="global-footer-copyrightYear" dateTime="">@CURRENT-YEAR</time>, Orphoros. All rights
+            reserved.</p>
+    </footer>
+</body>
+
+</html>

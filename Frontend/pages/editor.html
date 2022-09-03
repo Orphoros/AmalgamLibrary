@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Amalgam Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+    <script defer src="../js/init.js"></script>
+    <script defer src="../js/editorButtonEvents.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <section id="global-header-title">
+            <img id="logo" src="../src/Orphoros.png" alt="Orphoros logo">
+            <h1>Orphoros – Amalgam Library</h1>
+        </section>
+
+        <section id="global-header-subtitle">
+            <p>Repo Editor</p>
+            <button class="global-button-navigation" id="editor-button-ShowRepoPage">Go back to Repo!</button>
+        </section>
+    </header>
+
+    <main id="editor-main">
+        <section class="editor-section">
+            <h1>Add a new author!</h1>
+            <form id="editor-form-addNewAuthor">
+                <label for="editor-input-add-authorName">Author name:</label><br>
+                <input type="text" id="editor-input-add-authorName" name="name" maxlength="255" placeholder="eg. Jack"
+                    required><br>
+
+                Author gender: <br>
+
+                <input type="radio" id="editor-input-add-male" name="male" value="true" checked>
+                <label for="editor-input-add-male">Male</label><br>
+
+                <input type="radio" id="editor-input-add-female" name="male" value="false">
+                <label for="editor-input-add-female">Female</label><br>
+
+                <br>
+                <input type="submit" value="Add new author">
+            </form>
+        </section>
+
+        <section class="editor-section">
+            <h1>Add a new book!</h1>
+            <form id="editor-from-addNewBook">
+                <label for="editor-input-add-isbn">ISBN:</label><br>
+                <input type="number" id="editor-input-add-isbn" name="isbn" max="9999999999" placeholder="eg. 123456789"
+                    required><br>
+
+                <label for="editor-input-add-title">Title of the book:</label><br>
+                <input type="text" id="editor-input-add-title" name="title" maxlength="255"
+                    placeholder="eg. A Nice Book" required><br>
+
+                Readable by kids: <br>
+
+                <input type="radio" id="editor-input-add-forKids-yes" name="forKids" value="true" checked>
+                <label for="editor-input-add-forKids-yes">Yes</label><br>
+
+                <input type="radio" id="editor-input-add-forKids-no" name="forKids" value="false">
+                <label for="editor-input-add-forKids-no">No</label><br>
+
+                <label for="editor-input-add-year">Publish year:</label><br>
+                <input type="number" id="editor-input-add-year" name="publishYear" placeholder="eg. 2020" required><br>
+
+                <label for="editor-selector-addAuthor-author">Author:</label><br>
+                <select name="id" id="editor-selector-addAuthor-author">
+                </select><br>
+
+                <br>
+                <input id="editor-input-submit-newBook" type="submit" value="Add new Book">
+            </form>
+        </section>
+
+        <section class="editor-section">
+            <h1>Edit book details!</h1>
+            <form id="editor-form-editExistingBook">
+                <label for="editor-selector-editBook-books">Book to edit:</label><br>
+                <select name="id" id="editor-selector-editBook-books">
+                </select><br><br>
+
+                <label for="editor-input-editBook-title">Title of the book:</label><br>
+                <input type="text" id="editor-input-editBook-title" name="title" maxlength="255"
+                    placeholder="eg. A Nice Book" required><br>
+
+                Readable by kids: <br>
+
+                <input type="radio" id="editor-input-editBook-forKids-yes" name="forKids" value="true" checked>
+                <label for="editor-input-editBook-forKids-yes">Yes</label><br>
+
+                <input type="radio" id="editor-input-editBook-forKids-no" name="forKids" value="false">
+                <label for="editor-input-editBook-forKids-no">No</label><br>
+
+                <label for="editor-input-editBook-year">Publish year:</label><br>
+                <input type="number" id="editor-input-editBook-year" name="publishYear" placeholder="eg. 2020"
+                    required><br>
+
+                <br>
+                <input id="editor-input-submit-editBook" type="submit" value="Edit Book">
+            </form>
+        </section>
+
+        <section class="editor-section">
+            <h1>Delete from repo!</h1>
+            <form id="editor-form-delete">
+                Delete: <br>
+
+                <input type="radio" id="editor-input-option-deleteAuthor" name="deleteRadioButton" checked>
+                <label for="editor-input-option-deleteAuthor">Author and their books</label><br>
+
+                <input type="radio" id="editor-input-option-deleteBook" name="deleteRadioButton">
+                <label for="editor-input-option-deleteBook">Only book</label>
+
+                <section id="editor-section-deleteArea-book" style="visibility: hidden;">
+                    <label for="editor-selector-deleteBook">Book:</label><br>
+                    <select name="id" id="editor-selector-deleteBook">
+                    </select>
+                </section>
+
+                <section id="editor-section-deleteArea-author">
+                    <label for="editor-selector-deleteAuthor">Author:</label><br>
+                    <select name="id" id="editor-selector-deleteAuthor">
+                    </select>
+                </section><br>
+
+                <br>
+                <input id="editor-input-submit-delete" type="submit" value="Delete author">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © <time id="global-footer-copyrightYear" dateTime="">@CURRENT-YEAR</time>, Orphoros. All rights
+            reserved.</p>
+    </footer>
+</body>
+
+</html>
